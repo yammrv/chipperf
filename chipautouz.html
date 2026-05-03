@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ChipAutoUz | Cyber-Luxury Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+        
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background: #020205;
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Murakkab Suyuq Fon */
+        .cyber-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #0a0a1f 0%, #020205 100%);
+        }
+
+        .cyber-bg::after {
+            content: "";
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Deep Liquid Glass Card */
+        .luxury-card {
+            background: rgba(18, 18, 28, 0.4);
+            backdrop-filter: blur(120px) saturate(200%);
+            -webkit-backdrop-filter: blur(120px) saturate(200%);
+            border-radius: 64px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 
+                0 100px 200px rgba(0, 0, 0, 1),
+                inset 0 0 40px rgba(255, 255, 255, 0.01);
+            width: 90%;
+            max-width: 440px;
+            padding: 50px 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Neon Border Flow Animatsiyasi */
+        .luxury-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 64px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent, rgba(30, 64, 175, 0.2), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* Section Styling */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 32px;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glass-btn:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .btn-glow {
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: 0.5s;
+        }
+
+        .glass-btn:hover .btn-glow {
+            left: 100%;
+        }
+
+        .action-primary {
+            background: #ffffff;
+            color: #000000;
+            font-weight: 800;
+            border-radius: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .action-primary:hover {
+            transform: scale(0.96);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            font-size: 9px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-bg"></div>
+
+    <div class="luxury-card text-center">
+        
+        <!-- Live Badge -->
+        <div class="flex justify-center mb-10">
+            <div class="stat-badge px-6 py-2 rounded-full flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping"></span>
+                LIVE CORE ACTIVE
+                <img src="https://hitwebcounter.com/counter/counter.php?page=chipautouz_cyber&style=0005&nbdigits=4&type=page&initCount=500" class="h-3 invert opacity-40" />
+            </div>
+        </div>
+
+        <!-- Central Identity -->
+        <div class="mb-12">
+            <div class="relative inline-block">
+                <div class="absolute inset-0 bg-blue-600 blur-[60px] opacity-20"></div>
+                <img src="chip.png" alt="ChipAutoUz" class="w-48 h-48 mx-auto object-contain relative z-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            </div>
+            <h1 class="text-4xl font-bold tracking-[-2px] mt-6 italic">CHIPAUTO<span class="text-blue-600 font-normal">UZ</span></h1>
+            <p class="text-[9px] text-gray-500 uppercase tracking-[0.6em] mt-4 opacity-50">Next-Gen Automotive Tuning</p>
+        </div>
+
+        <!-- Premium Services Grid -->
+        <div class="grid grid-cols-2 gap-4 mb-10">
+            <div class="glass-btn p-6 flex flex-col items-center gap-3">
+                <div class="btn-glow"></div>
+                <i class="fas fa-terminal text-blue-500 text-xl"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Programma</span>
+            </div>
+            <div class="glass-btn p-6 flex flex-col items-center gap-3">
+                <div class="btn-glow"></div>
+                <i class="fas fa-bolt text-emerald-500 text-xl"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Elektromobil</span>
+            </div>
+            <div class="glass-btn p-6 flex flex-col items-center gap-3 text-center">
+                <div class="btn-glow"></div>
+                <i class="fas fa-microchip text-cyan-500 text-xl"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Diagnostika</span>
+            </div>
+            <div class="glass-btn p-6 flex flex-col items-center gap-3 text-center">
+                <div class="btn-glow"></div>
+                <i class="fas fa-globe text-indigo-500 text-xl"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Rusifikatsiya</span>
+            </div>
+        </div>
+
+        <!-- Interaction Area -->
+        <div class="space-y-4">
+            <a href="tel:+998913291112" class="action-primary flex items-center justify-center w-full py-5 text-sm">
+                <i class="fas fa-phone-alt mr-3 text-[10px]"></i> Aloqa Markazi
+            </a>
+
+            <div class="grid grid-cols-2 gap-4">
+                <a href="https://t.me/Muhriddinbek" class="glass-btn py-5 flex items-center justify-center text-xl hover:text-white">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://instagram.com/chipautouz" class="glass-btn py-5 flex items-center justify-center text-xl hover:text-white">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <a href="https://yandex.uz/maps/-/CPWUZMIV" class="glass-btn py-4 flex items-center justify-center gap-3 text-[9px] font-bold uppercase opacity-60 hover:opacity-100">
+                    <i class="fab fa-yandex text-red-500"></i> Yandex
+                </a>
+                <a href="https://maps.google.com/maps?q=40.438727,71.752097" class="glass-btn py-4 flex items-center justify-center gap-3 text-[9px] font-bold uppercase opacity-60 hover:opacity-100">
+                    <i class="fas fa-map-marker-alt text-green-500"></i> Google
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-16 text-center">
+            <div class="h-[1px] w-8 bg-blue-600/30 mx-auto mb-6"></div>
+            <p class="text-[7px] text-gray-700 uppercase tracking-[0.8em]">Engineering the future • 2026</p>
+        </div>
+    </div>
+
+</body>
+</html>
